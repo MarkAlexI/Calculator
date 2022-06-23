@@ -27,6 +27,15 @@ body {
     background-color: aliceblue;
 }
 
+.task, .answer {
+    display: flex;
+    font-size: 32px;
+    margin: 2px;
+    align-items: center;
+    justify-content: flex-end;
+    color: darkgrey;
+}
+
 .key {
     display: flex;
     align-items: flex-end;
