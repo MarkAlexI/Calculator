@@ -30,9 +30,9 @@ body {
 .task, .answer {
     display: flex;
     font-size: 32px;
-    margin: 2px;
-    align-items: center;
-    justify-content: flex-end;
+    padding: 2px;
+    align-items: flex-end;
+    justify-content: center;
     color: darkgrey;
 }
 
