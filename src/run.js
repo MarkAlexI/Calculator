@@ -7,6 +7,12 @@ function input(value) {
   task.innerText = string;
   return;
 }
+
+function clear() {
+  task.innerText = "";
+  return;
+}
+
 function calc() {
   answer.innerText = eval(string);
   return;
