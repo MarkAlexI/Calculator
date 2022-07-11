@@ -20,21 +20,21 @@
 
         <div class="key" onclick="input('(')">(</div>
         <div class="key" onclick="input(')')">)</div>
-        <div class="key">!</div>
+        <div class="key" onclick="clear(0)">AC</div>
         <div class="key" onclick="input('ln')">ln</div>
-        <div class="key">log</div>
+        <div class="key">lg</div>
 
         <div class="key" onclick="input(7)">7</div>
         <div class="key" onclick="input(8)">8</div>
         <div class="key" onclick="input(9)">9</div>
-        <div class="key"  onclick="input('/')">:</div>
-        <div class="key" onclick="input('^')">xn</div>
+        <div class="key" onclick="input('/')">:</div>
+        <div class="key" onclick="input('^')">x<sup>n</sup></div>
 
         <div class="key" onclick="input(4)">4</div>
         <div class="key" onclick="input(5)">5</div>
         <div class="key" onclick="input(6)">6</div>
         <div class="key" onclick="input('*')">X</div>
-        <div class="key" onclick="input('^2')">x2</div>
+        <div class="key" onclick="input('^2')">x<sup>2</sup></div>
 
         <div class="key" onclick="input(1)">1</div>
         <div class="key" onclick="input(2)">2</div>
@@ -46,8 +46,8 @@
         <div class="key" onclick="input('.')">.</div>
         <div class="key" onclick="calc()">=</div>
         <div class="key" onclick="input('+')">+</div>
-        <div class="key" onclick="clear()">CE</div>
+        <div class="key" onclick="clear(-1)">CE</div>
     </div>
-    <script src="run.js"></script>
+    <script defer="true" src="run.js"></script>
 </body>
 </html>
