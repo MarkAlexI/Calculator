@@ -8,8 +8,9 @@ function input(value) {
   return;
 }
 
-function clear() {
-  task.innerText = "";
+function clear(index) {
+  string = string.slice(0, index);
+  task.innerText = string;
   return;
 }
 
