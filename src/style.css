@@ -45,11 +45,7 @@ body {
     opacity: 0.7;
     margin: 5px;
     border: 2px solid rgb(55, 51, 66);
-    cursor: pointer;
-}
-
-.clear {
-    grid-column: span 2;
+    cursor: pointer
 }
 
 .key:hover {
