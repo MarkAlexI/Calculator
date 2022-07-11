@@ -15,6 +15,11 @@ function clear(index) {
 }
 
 function calc() {
-  answer.innerText = eval(string);
+  let task = string
+                  .replaceAll('^', ' ** ')
+                  .replaceAll('ln', 'Math.log')
+                  .replaceAll('lg', 'Math.log10');
+  answer.innerText = eval(task);
+  console.log(task);
   return;
 }
