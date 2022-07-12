@@ -3,12 +3,15 @@ let task = document.getElementById("task");
 let answer = document.getElementById("answer");
 
 function input(value) {
-  string += value;
+  value
+       ? string += value
+       : string = "1/(" + string + ")";
   task.innerText = string;
   return;
 }
 
 function clear(index) {
+  console.log(index);
   string = string.slice(0, index);
   task.innerText = string;
   return;
