@@ -10,7 +10,7 @@ function input(value) {
   return;
 }
 
-function clear(index) {
+function clearInput(index) {
   console.log(index);
   string = string.slice(0, index);
   task.innerText = string;
