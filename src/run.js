@@ -3,6 +3,7 @@ let task = document.getElementById("task");
 let answer = document.getElementById("answer");
 
 function input(value) {
+  console.log(value);
   value
        ? string += value
        : string = "1/(" + string + ")";
