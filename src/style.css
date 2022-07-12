@@ -8,7 +8,7 @@ body {
 }
 
 .calculator {
-    width: 400px;
+    width: 370px;
     background-color: deepskyblue;
     display: grid;
     align-items: center;
