@@ -16,7 +16,7 @@ function input(value) {
 function clearInput(index) {
   console.log(index);
   string = string.slice(0, index);
-  task.innerText = string.length ? string : "0";
+  task.innerText = string.length > 0 ? string : "0";
   return;
 }
 
