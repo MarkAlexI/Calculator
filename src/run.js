@@ -4,6 +4,7 @@ let answer = document.getElementById("answer");
 
 function input(value) {
   console.log(value);
+  if (string === "0") string = "";
   value
        ? string += value
        : string = "1/(" + string + ")";
@@ -14,7 +15,7 @@ function input(value) {
 function clearInput(index) {
   console.log(index);
   string = string.slice(0, index);
-  task.innerText = string;
+  task.innerText = string.length ? string : "0";
   return;
 }
 
