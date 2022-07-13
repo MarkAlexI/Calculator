@@ -9,6 +9,7 @@ function input(value) {
        ? string += value
        : string = "1/(" + string + ")";
   task.innerText = string;
+  answer.innerText = "0";
   return;
 }
 
