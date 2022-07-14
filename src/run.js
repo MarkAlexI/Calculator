@@ -27,7 +27,7 @@ function calc() {
                   .replaceAll('lg', 'Math.log10');
   let result = +eval(task);
   result > 1 ? result.toFixed(6) : result.toPrecision(6);
-  answer.innerText = result;
-  console.log(task);
+  answer.innerText = result ?? "Wrong task!";
+  console.log(result);
   return;
 }
