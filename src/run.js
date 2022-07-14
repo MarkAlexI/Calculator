@@ -25,7 +25,9 @@ function calc() {
                   .replaceAll('^', ' ** ')
                   .replaceAll('ln', 'Math.log')
                   .replaceAll('lg', 'Math.log10');
-  answer.innerText = eval(task);
+  let result = +eval(task);
+  result > 1 ? result.toFixed(6) : result.toPrecision(6);
+  answer.innerText = result;
   console.log(task);
   return;
 }
