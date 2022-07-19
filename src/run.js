@@ -29,7 +29,7 @@ function calc() {
   
   try {
     result = +eval(task);console.log(result > 1);
-    result > 1 ? result.toFixed(6) : result.toPrecision(6);
+    result = result > 1 ? +result.toFixed(6) : +result.toPrecision(6);
   }
   
   catch {
