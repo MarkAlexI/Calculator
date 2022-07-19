@@ -25,9 +25,16 @@ function calc() {
                   .replaceAll('^', ' ** ')
                   .replaceAll('ln', 'Math.log')
                   .replaceAll('lg', 'Math.log10');
-  let result = +eval(task);
-  result > 1 ? result.toFixed(6) : result.toPrecision(6);
-  if (Number.isNaN(result)) result = "Wrong task";
+  let result;
+  
+  try {
+    result = +eval(task);console.log(result > 1);
+    result > 1 ? result.toFixed(6) : result.toPrecision(6);
+  }
+  
+  catch {
+    result = "Wrong task";
+  }
   answer.innerText = result;
   console.log(result);
   return;
