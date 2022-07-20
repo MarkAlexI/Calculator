@@ -1,6 +1,15 @@
 let string = "";
 let task = document.getElementById("task");
 let answer = document.getElementById("answer");
+let ang = document.getElementById("ang");
+let degs = [['rad', 1], ['deg', Math.PI/180], ['grd', 1/63.662]];
+let index = 0, coeff = 1;
+
+function changeAng() {
+  index++;
+  if (index === 3) index = 0;
+  ang.innerText = degs[index][0];
+}
 
 function input(value) {
   if (string === "0") string = "";
@@ -21,14 +30,15 @@ function clearInput(index) {
 }
 
 function calc() {console.log(string);
+  coeff = degs[index][1];
   let task = string
                   .replaceAll('^', ' ** ')
                   .replaceAll('ln', 'Math.log')
                   .replaceAll('lg', 'Math.log10')
                   .replaceAll('π', 'Math.PI')
-                  .replaceAll('sin', 'Math.sin')
-                  .replaceAll('cos', 'Math.cos')
-                  .replaceAll('tg', 'Math.tan');
+                  .replaceAll('sin', coeff + '* Math.sin')
+                  .replaceAll('cos', coeff + '* Math.cos')
+                  .replaceAll('tg', coeff + '* Math.tan');
   let result;
   
   try {
