@@ -20,15 +20,19 @@ function clearInput(index) {
   return;
 }
 
-function calc() {
+function calc() {console.log(string);
   let task = string
                   .replaceAll('^', ' ** ')
                   .replaceAll('ln', 'Math.log')
-                  .replaceAll('lg', 'Math.log10');
+                  .replaceAll('lg', 'Math.log10')
+                  .replaceAll('π', 'Math.PI')
+                  .replaceAll('sin', 'Math.sin')
+                  .replaceAll('cos', 'Math.cos')
+                  .replaceAll('tg', 'Math.tan');
   let result;
   
   try {
-    result = +eval(task);console.log(result > 1);
+    result = +eval(task);
     result = result > 1 ? +result.toFixed(6) : +result.toPrecision(6);
   }
   
