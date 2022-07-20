@@ -13,7 +13,7 @@ body {
     display: grid;
     align-items: center;
     justify-content: center;
-    grid-template-columns: repeat(5, 65px);
+    grid-template-columns: repeat(5, 70px);
     border: 2px solid black;
     margin: 100px auto 10px;
     user-select: none;
