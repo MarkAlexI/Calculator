@@ -1,17 +1,19 @@
 const cName = "calc-pwa",
 cFiles = [
-  "/src/index.html",
-  "/src/style.css",
-  "/src/run.js"
+  "./src/index.html",
+  "./src/style.css",
+  "./src/run.js"
 ];
 
-self.addEventListener("install", (evt) => {
-  evt.waitUntil(
+self.addEventListener("install", (event) => {
+  event.waitUntil(
     caches.open(cName)
     .then((cache) => {
       return cache.addAll(cFiles);
     })
-    .catch((err) => { console.error(err) })
+    .catch((err) => {
+      console.error(err);
+    })
   );
 });
 
