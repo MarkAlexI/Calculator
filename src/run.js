@@ -1,3 +1,5 @@
+"use strict";
+
 let string = "";
 let task = document.getElementById("task");
 let answer = document.getElementById("answer");
@@ -22,14 +24,13 @@ function input(value) {
 }
 
 function clearInput(index) {
-  console.log(index);
   string = string.slice(0, index);
   task.innerText = string.length > 0 ? string : "0";
   if (string.length === 0) answer.innerText = "0";
   return;
 }
 
-function calc() {console.log(string);
+function calc() {
   coeff = degs[index][1];
   let task = string
                   .replaceAll('^', ' ** ')
@@ -43,13 +44,12 @@ function calc() {console.log(string);
   
   try {
     result = +eval(task);
-    result = result > 1 ? +result.toFixed(6) : +result.toPrecision(6);
+    result = result > 1 ? result.toFixed(6) : result.toPrecision(6);
   }
   
   catch {
     result = "Wrong task";
   }
   answer.innerText = result;
-  console.log(result);
   return;
 }
