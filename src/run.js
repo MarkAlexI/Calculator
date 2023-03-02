@@ -30,6 +30,11 @@ function clearInput(index) {
   return;
 }
 
+function formatResult(res) {
+  if (Number.isNaN(res) || !Number.isFinite(res)) return "Error";
+  return res > 1 ? res.toFixed(6) : res.toPrecision(6);
+}
+
 function calc() {
   coeff = degs[index][1];
   let task = string
@@ -44,7 +49,7 @@ function calc() {
   
   try {
     result = +eval(task);
-    result = result > 1 ? result.toFixed(6) : result.toPrecision(6);
+    result = formatResult(result);
   }
   
   catch {
