@@ -1,7 +1,7 @@
 {
   "name": "Simple Calculator",
   "manifest_version": 3,
-  "display": "standalone",
+  "display": "minimal-ui",
   "description": "Simple calculator with basic functions. You can install this app.",
   "short_name": "Calc",
   "icons": [{
