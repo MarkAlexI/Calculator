@@ -32,7 +32,7 @@ function clearInput(index) {
 
 function formatResult(res) {
   if (Number.isNaN(res) || !Number.isFinite(res)) return "Error";
-  return res > 1 ? res.toFixed(6) : res.toPrecision(6);
+  return (res > 1 ? res.toFixed(6) : res.toPrecision(6)).replace(/0*$/, '').replace(/\.$/, '');
 }
 
 function calc() {
